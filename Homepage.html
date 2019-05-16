@@ -8,10 +8,10 @@
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     padding-top: 0px;
-    height: 0;
-    overflow: hidden; 
+    height: 100%;
+    overflow: visible; 
 	
 }
 .video-container iframe,
@@ -20,18 +20,20 @@
     position: absolute; 
     top: 0;
     left: 0;
-    width: 50%;
-    height: 50%;
-	display: inline-block;
+    width: 100%;
+    height:100%;
+	
 }    
 <!-- this forces the video player with this tag to have a completely fixed position on the page regardless of other objects. its also makes it 100% of its natural size -->
 
 * {box-sizing:border-box}
 
 .slideshow-container { 
-	max-width: 1000px;
+	max-width: 500px;
+	max-height: 250px;
 	position: relative;
-	margin: auto;
+	margin: 10px;
+	padding-bottom:1000px;
 } 
 <!-- adjusting the slideshow container -->
 
@@ -97,7 +99,7 @@
 	display: inline-block;
 	transition: background-color 0.6s ease;
 } 
-<!-- styiling for the dot inidcators on the slideshow -->
+<!-- styiling for the dot indicators on the slideshow -->
 
 .active, .dot:hover {
 	background-color: #717171;
@@ -121,6 +123,20 @@
 	to {opacity: 1}
 }	
 
+.imgbox {
+	background:url(1080.jpg);
+	overflow:visible;
+}
+<!-- this creates a class that simply contains an image of a gtx 1080 so when placed that image will be displayed
+
+.imgbox:hover {
+	
+	
+	background:url(computer.jpg);,height:170px;,width:170px;
+	overflow:visible;
+}
+<!-- this is the image that the imagebox should change to when the mouse is hovered over the box, this is because :hover means what happens on mouseover -->
+
 
 </style>
 </head>
@@ -129,26 +145,31 @@
 <body>
 <h1> welcome to rig fixers!</h1>
 <h2>we are dedicated to getting your rig up and running, quick and clean!</h2>
-<div class="sticky">
+<div class="sticky" style="width: 90px">
 	<navilist> <a href="Homepage.html">home</a> </navilist>
 	<navilist> <a href="contactpage.html">contact us</a> </navilist>
 	
 	
 </div>
 <div class="video-container">
-<iframe width="250" height="100" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="300" height="300" padding-bottom="50" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div style="padding-bottom: 20px">
-<a target="_blank" href="1080.jpg"> 
-<img src="1080.jpg" alt="gtx 1080" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px;hover;float:right;"> <!-- this shpould embed an image of a graphics card on the left side of the web page,where it should hover -->
-</a> 
+<div class="imgbox" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px;hover;float:right;"> 
+<!-- this shpould embed an image of a graphics card on the left side of the web page,where it should hover when moused over it should change to a pic of computer -->
+</div>
+<br>
 <p>at rig fixers we are dedicated to helping you build a new computer by selling you parts and addons such as graphics cards,CPUs,mice,monitors and cases.</p>
 <p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!–– text to describe the business -->
+<div>
 <a target="_blank" href="gif.gif"> 
-<img src="gif.gif" alt="gif" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px;hover; float:left;"> <!-- embedded gif that links to itself -->
+<img src="gif.gif" alt="gif" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px; ">
+ <!-- embedded gif that links to itself -->
+</a>
 </div>
-
+</div>
+<br>
 
 <div class="slideshow-container"> 
 <!-- slideshow container division-->
@@ -191,11 +212,13 @@
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
+// this marks the starting variable of the slide index as one as well as creating the variable
 
 function plusSlides(n) {
 	showSlides(slideIndex += n);
 } 
 // next/previous controls
+// this code judeges which slide to display based on the numbe rof times left or right has been hit.
 
 function currentSlide(n) {
 	showSlides(slideIndex = n)
@@ -218,6 +241,8 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " active";
 }
 </script>
+<div class="imgbox" style="width:170px;height:170px;>
+</div>
 
 </body>
 </html>
