@@ -78,10 +78,10 @@
 	padding: 5px 9px;
 	position: absolute;
 	bottom: 8px;
-	width: 100%
+	width: 100%;
 	text-align: center;
 } 
-<!-- this should style the caption text and centre it at the bottom of the slideshow -->
+/* this should style the caption text and centre it at the bottom of the slideshow */
 
 .numbertext {
 	color: #f2#f2#f2;
@@ -90,7 +90,7 @@
 	position: absolute;
 	top: 0;
 } 
-<!-- styles the text representing the numbers -->
+/* styles the text representing the numbers */
 
 .dot {
 	cursor: pointer;
@@ -102,7 +102,7 @@
 	display: inline-block;
 	transition: background-color 0.6s ease;
 } 
-<!-- styiling for the dot indicators on the slideshow -->
+/* styiling for the dot indicators on the slideshow */
 
 .active, .dot:hover {
 	background-color: #717171;
@@ -114,7 +114,7 @@
 	animation-name: fade;
 	animation-duration: 1.25s;
 }	
-<-- this tunes the animation for changing slides on the slideshow. -->
+/*this tunes the animation for changing slides on the slideshow. */
 
 @-webkit-keyframes fade {
 	from {opacity: .4}
@@ -130,15 +130,15 @@
 	background:url(1080.jpg);
 	overflow:visible;
 }
-<!-- this creates a class that simply contains an image of a gtx 1080 so when placed that image will be displayed
+/* this creates a class that simply contains an image of a gtx 1080 so when placed that image will be displayed */
 
-.imgbox:hover {
+.imgbox:hover{
 	
 	
-	background:url(computer.jpg);,height:170px;,width:170px;
+	background:url("computer.jpg");height:170px;,width:170px;
 	overflow:visible;
 }
-<!-- this is the image that the imagebox should change to when the mouse is hovered over the box, this is because :hover means what happens on mouseover -->
+/* this is the image that the imagebox should change to when the mouse is hovered over the box, this is because :hover means what happens on mouseover */
 
 
 </style>
@@ -155,18 +155,18 @@
 	
 	
 </div>
-<a display="inline-block", href="brochure.docx"> download our brochure of products</a>
+<a display="inline-block" href="brochure.docx"> download our brochure of products</a>
 <div class="video-container">
 <iframe width="100%" height="1000" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div style="padding-bottom: 20px">
-<div class="imgbox" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px;hover;float:right;"> 
+<div class="imgbox" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px;float:right;"> 
 <!-- this shpould embed an image of a graphics card on the left side of the web page,where it should hover when moused over it should change to a pic of computer -->
 </div>
 <br>
 <p>at rig fixers we are dedicated to helping you build a new computer by selling you parts and addons such as graphics cards,CPUs,mice,monitors and cases.</p>
-<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!–– text to describe the business -->
+<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!ï¿½ï¿½ text to describe the business -->
 <div>
 <a target="_blank" href="gif.gif"> 
 <img src="gif.gif" alt="gif" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px; ">
@@ -205,7 +205,6 @@
 	<a class="next" onclick="plusSlides(1)">&#10095;</a> 
 <!-- code for the next button -->
 </div>
-<br>
 
 <!-- code for dots and circles on slideshow -->
 <div style="text-align:center">
@@ -246,8 +245,6 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " active";
 }
 </script>
-<div class="imgbox" style="width:170px;height:170px;>
-</div>
 
 </body>
 </html>

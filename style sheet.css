@@ -49,7 +49,7 @@ div.sticky { /* this is the style items for the div that have the class called s
 	border:8px;
 	overflow: auto;
 	width: 300px;
-	margin-top: 70px
+	margin-top: 70px;
 	display:inline-block;
 	z-index: 1;
 
