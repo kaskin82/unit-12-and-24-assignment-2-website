@@ -15,7 +15,7 @@
     overflow: visible; 
 	
 }
-<!-- this code creates a clas known as a video container and defines its size and gives it a relative position.
+/* this code creates a clas known as a video container and defines its size and gives it a relative position. */
 
 .video-container iframe,
 .video-container object,
@@ -27,7 +27,7 @@
     height: 100%;
 	
 }    
-<!-- this forces the video player with this tag to have a completely fixed position on the page regardless of other objects. its also makes it 100% of its natural size -->
+/* this forces the video player with this tag to have a completely fixed position on the page regardless of other objects. its also makes it 100% of its natural size */
 
 * {box-sizing:border-box}
 
@@ -35,15 +35,15 @@
 	max-width: 500px;
 	max-height: 500px;
 	position: relative;
-	margin: 10px;
-	padding-bottom:1000px;
+	margin: auto;
+	padding-bottom:50px;
 } 
-<!-- adjusting the slideshow container -->
+/* adjusting the slideshow container */
 
 .myslides {
 	display:none;
 } 
-<!-- this means the images in the slideshow dont display by default -->
+/* this means the images in the slideshow dont display by default */
 
 .prev, .next {
 	cursor: pointer;
@@ -59,18 +59,18 @@
 	border-radius: 0 5px 5px 0;
 	user-select: none;
 } 
-<!-- this styles the next and previous buttons for my slide show -->
+/* this styles the next and previous buttons for my slide show */
 
 .next {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 } 
-<!-- aligns the next arrow to the right of the slideshow -->
+/* aligns the next arrow to the right of the slideshow */
 
 .prev:hover, .next:hover {
 	background-color: rgba(0,0,0,0,8);
 } 
-<!-- adds a blackground with some transparency when the next/prev keys are hovered over -->
+/* adds a blackground with some transparency when the next/prev keys are hovered over */
 
 .text {
 	color: #f2#f2#f2;
@@ -152,12 +152,16 @@
 	<navilist> <a href="Homepage.html">home</a> </navilist>
 	<navilist> <a href="contactpage.html">contact us</a> </navilist>
 	<navilist> <a href="orderform.html">order form</a> </navilist>	
+	<navilist> <a href="newsletterandbrochure.html"> newsletter </a> </navilist>
+	<navilist> <a href="graphicscarddeal.html"> graphics card deal </a> </navilist>
+	<navilist> <a href="keyboarddeal.html"> keyboard deal </a> </navilist>
+	<navilist> <a href="mousedeal.html"> mouse deal </a> </navilist>
+	<navilist> <a href="aboutpage.html"> about us </a> </navilist>
 	
 	
 </div>
-<a display="inline-block" href="brochure.docx"> download our brochure of products</a>
 <div class="video-container">
-<iframe width="100%" height="1000" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div style="padding-bottom: 20px">
@@ -166,7 +170,7 @@
 </div>
 <br>
 <p>at rig fixers we are dedicated to helping you build a new computer by selling you parts and addons such as graphics cards,CPUs,mice,monitors and cases.</p>
-<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!�� text to describe the business -->
+<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!-- text to describe the business -->
 <div>
 <a target="_blank" href="gif.gif"> 
 <img src="gif.gif" alt="gif" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px; ">
@@ -183,7 +187,7 @@
 	<div class="myslides fade">
 		<div class="numbertext">1 / 3</div>
 		<img src="keyboard.jpg" style="width:100%">
-		<div class="text"> choose from our wide variet of monitors </div>
+		<div class="text"> choose from one of our rotating keyboard sales? </div>
 	</div>
 <!-- this set creates a slide for a full width image with a caption, this will be repeated for each image in the slideshow -->
 
@@ -196,7 +200,7 @@
 	<div class="myslides fade">
 		<div class="numbertext">3 / 3</div>
 		<img src="monitor.png" style="width:100%">
-		<div class="text"> you name the part,we got it or we can order it!</div>
+		<div class="text"> not the deal you want? place an email request!</div>
 	</div>
 
 
@@ -222,7 +226,7 @@ function plusSlides(n) {
 	showSlides(slideIndex += n);
 } 
 // next/previous controls
-// this code judeges which slide to display based on the numbe rof times left or right has been hit.
+// this code judeges which slide to display based on the number of times left or right has been hit.
 
 function currentSlide(n) {
 	showSlides(slideIndex = n)

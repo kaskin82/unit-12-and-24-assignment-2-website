@@ -55,10 +55,28 @@ div.sticky { /* this is the style items for the div that have the class called s
 
 }
 h2{ 
-	/* defines the basic design of p1 */
+	/* defines the basic design of heading 2 */
 font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
 font-size: 24px; /* makes the text 24pixels big /*
 margin-left:50px; /* there must be 30px to the left of any p objects before any items can begin */
 text-align: center;
 
 }
+salesheader {
+	background-color: chocolate;
+	height:150px;
+	width:98vw;
+	font-size:75px;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	border-style: ridge;
+	border-width: 7px;
+	border-color: red;
+	margin: auto;
+}
+producttitle {
+	font-size: 30px;
+	font-weight: bold;
+}
+	

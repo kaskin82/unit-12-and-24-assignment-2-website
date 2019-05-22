@@ -2,10 +2,78 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>newsletter and css</title>
+<title>newsletter and brochure</title>
 <link href="style sheet.css" rel="stylesheet" type="text/css">
+<style>
+</style>
+<script>
+function validateForm() {
+var x = document.forms["newsletterform"]["email"].value; 
+	var go = true ;
+	var error = "";
+	if ((x == "")||(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x)))){   // checks for any of theese symbols or functions in email form
+		error+="You must enter a valid email adress" ; // adds this text to the error var if email is empty
+		go= false; // returns go as false 
+	}
+	var firstemail = document.forms["newsletterform"]["email"].value;
+	var secondemail = document.forms["newsletterform"]["verifyemail"].value;
+	if( firstemail!=secondemail){ // checks that the emails are not the same
+		error+= "\n Emails must match!"; // adds onto the error message
+		go= false ;
+	}
+	if(!(go)){ // if go returns as false trigger this script
+		alert(error); // prints a popup alert with the contents of var "error"
+		return go; // sends go
+	}
+}
+	
+	
+</script>
 </head>
 
 <body>
+<h1> welcome to rig fixers!</h1>
+<h2>we are dedicated to getting your rig up and running, quick and clean!</h2>
+
+<div class="sticky" style="width: 90px">
+	<navilist> <a href="Homepage.html">home</a> </navilist>
+	<navilist> <a href="contactpage.html">contact us</a> </navilist>
+	<navilist> <a href="orderform.html">order form</a> </navilist>
+	<navilist> <a href="newsletterandbrochure.html"> newsletter </a> </navilist>
+	<navilist> <a href="graphicscarddeal.html"> graphics card deal </a> </navilist>
+	<navilist> <a href="keyboarddeal.html"> keyboard deal </a> </navilist>
+	<navilist> <a href="mousedeal.html"> mouse deal </a> </navilist>
+	<navilist> <a href="aboutpage.html"> about us </a> </navilist>
+		
+</div>
+
+<div style="margin:auto; background-color: LightBlue; width: 350px; height:250px; border-bottom: 60px; border-style: double; border-width: 7px; margin-bottom: 60px;">
+<p>come download our current newsletter brochure containing a handy reference to all deals we are currently hosting! </p>
+<a href="brochure.docx"> download our brochure of products</a>
+</div>
+
+<div style="margin:auto; background-color: LightBlue; width: 550px; height:250px; border-bottom: 60px; border-style: double; border-width: 7px; margin-bottom: 60px;">
+	<p> if you would like you can also sign up to our newsletter by entering your email below:</p>
+	<form name="newsletterform" action="/newsletter.php" onsubmit="return validateForm()" method= "post">
+	<table>
+		<tr>
+			<td> email address: </td>
+			<td> <input type="text" name="email" size="70"> </td>
+		</tr>
+		<tr>
+			<td> verify email: </td>
+			<td> <input type="text" name="verifyemail" size="70"> </td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Send"> </td> <!-- creates a button that sends the data and tirggers the validaiton script -->
+		</tr>
+	</table>
+	</form>
+		
+</div>
+
+
+
+
 </body>
 </html>
