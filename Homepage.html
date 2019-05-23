@@ -13,6 +13,7 @@
     height: 100%;
 	width:100%;
     overflow: visible; 
+	<!-- the overflow visible means that if the itme witin this clas sis bigger than the alloted size it will be shown anyway-->
 	
 }
 /* this code creates a clas known as a video container and defines its size and gives it a relative position. */
@@ -35,7 +36,7 @@
 	max-width: 500px;
 	max-height: 500px;
 	position: relative;
-	margin: auto;
+	margin: auto; <!-- centers the slideshow container -->
 	padding-bottom:50px;
 } 
 /* adjusting the slideshow container */
@@ -50,12 +51,12 @@
 	position: absolute;
 	top: 50%;
 	width: auto;
-	margin-top: -22px;
+	margin-top: -22px; <!-- moves the cursor inwards -->
 	padding: 12px;
 	color: lightblue;
 	font-weight: bold;
 	font-size: 20px;
-	transition: 0.6s ease;
+	transition: 0.6s ease; <!-- changes how the arros transition when clicked -->
 	border-radius: 0 5px 5px 0;
 	user-select: none;
 } 
@@ -68,7 +69,7 @@
 /* aligns the next arrow to the right of the slideshow */
 
 .prev:hover, .next:hover {
-	background-color: rgba(0,0,0,0,8);
+	background-color: rgba(0,0,0,0,8); <!-- changes the background of the arrows when they are hovered over -->
 } 
 /* adds a blackground with some transparency when the next/prev keys are hovered over */
 
@@ -111,7 +112,7 @@
 .fade { 
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.25s;
-	animation-name: fade;
+	animation-name: fade; <!-- applies an fade nimation that lasts 1.25secs to anything with this class -->
 	animation-duration: 1.25s;
 }	
 /*this tunes the animation for changing slides on the slideshow. */
@@ -127,7 +128,7 @@
 }	
 
 .imgbox {
-	background:url(1080.jpg);
+	background:url(1080.jpg); 
 	overflow:visible;
 }
 /* this creates a class that simply contains an image of a gtx 1080 so when placed that image will be displayed */
@@ -146,11 +147,11 @@
 
 
 <body>
-<h1> welcome to rig fixers!</h1>
-<h2>we are dedicated to getting your rig up and running, quick and clean!</h2>
-<div class="sticky" style="width: 90px">
-	<navilist> <a href="Homepage.html">home</a> </navilist>
-	<navilist> <a href="contactpage.html">contact us</a> </navilist>
+<h1> welcome to rig fixers!</h1> <!-- header for the site title -->
+<h2>we are dedicated to getting your rig up and running, quick and clean!</h2> <!-- sub header -->
+<div class="sticky" style="width: 90px"> <!-- creates a new division that uses the sticky class from the style sheet-->
+	<navilist> <a href="Homepage.html">home</a> </navilist> <!-- using the navilist class defined in the styke sheet creates a link to the hompage (this page) <a> represents a link-->
+	<navilist> <a href="contactpage.html">contact us</a> </navilist> <!-- the rest are the same as the first link but ake to other pages -->
 	<navilist> <a href="orderform.html">order form</a> </navilist>	
 	<navilist> <a href="newsletterandbrochure.html"> newsletter </a> </navilist>
 	<navilist> <a href="graphicscarddeal.html"> graphics card deal </a> </navilist>
@@ -160,8 +161,8 @@
 	
 	
 </div>
-<div class="video-container">
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container"> <!-- once again creates a division using the parameters defined in the class video-container which are defined above -->
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/AKjR607d_uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <!-- this code determines how the embedded video can act, most of this is directly from youtube -->
 </div>
 
 <div style="padding-bottom: 20px">
@@ -170,7 +171,7 @@
 </div>
 <br>
 <p>at rig fixers we are dedicated to helping you build a new computer by selling you parts and addons such as graphics cards,CPUs,mice,monitors and cases.</p>
-<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!-- text to describe the business -->
+<p> we also offer PC fixing services for if you break yours or need a part installed but dont know how!</p> <!-- text to describe the business this is plain text with no special alterations -->
 <div>
 <a target="_blank" href="gif.gif"> 
 <img src="gif.gif" alt="gif" style="width: 170px;height: 170px;margin-left: 15px; margin-bottom: 15px; ">
@@ -207,7 +208,7 @@
 	<a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
 <!-- the previous button for the slideshow -->
 	<a class="next" onclick="plusSlides(1)">&#10095;</a> 
-<!-- code for the next button -->
+<!-- code for the next button --> <!-- onlcick represents something that happens when the relevant element is clicked -->
 </div>
 
 <!-- code for dots and circles on slideshow -->
@@ -235,17 +236,17 @@ function currentSlide(n) {
 
 function showSlides(n) {
 	var i;
-	var slides = document.getElementsByClassName("myslides");
-	var dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
+	var slides = document.getElementsByClassName("myslides"); // creates variable slides that is equal to whatever myslides value is.
+	var dots = document.getElementsByClassName("dot"); // same as before the variable is created and will be ewual to the current vlaue of the dots of the slideshow 
+	if (n > slides.length) {slideIndex = 1} // resets the slides to one if it overscrolls
+	if (n < 1) {slideIndex = slides.length} // goes to the alst slide if the slideshow scrolls too far left.
 	for (i = 0; i < slides.length; i++) {
 		slides[i].style.display = "none";
 	}
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
 	}
-	slides[slideIndex-1].style.display = "block";
+	slides[slideIndex-1].style.display = "block"; // adjusts how the slides are displayed
 	dots[slideIndex-1].className += " active";
 }
 </script>

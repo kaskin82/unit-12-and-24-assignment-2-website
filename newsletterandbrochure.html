@@ -8,9 +8,9 @@
 </style>
 <script>
 function validateForm() {
-var x = document.forms["newsletterform"]["email"].value; 
-	var go = true ;
-	var error = "";
+var x = document.forms["newsletterform"]["email"].value; // creates variable x which is equal in this case to whatever is in the email section of the newsletterform
+	var go = true ; // creates variable go and sets it to true
+	var error = ""; // creates the initial error text that will be filled out later
 	if ((x == "")||(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x)))){   // checks for any of theese symbols or functions in email form
 		error+="You must enter a valid email adress" ; // adds this text to the error var if email is empty
 		go= false; // returns go as false 
@@ -19,7 +19,7 @@ var x = document.forms["newsletterform"]["email"].value;
 	var secondemail = document.forms["newsletterform"]["verifyemail"].value;
 	if( firstemail!=secondemail){ // checks that the emails are not the same
 		error+= "\n Emails must match!"; // adds onto the error message
-		go= false ;
+		go= false ; // sets variable go to false
 	}
 	if(!(go)){ // if go returns as false trigger this script
 		alert(error); // prints a popup alert with the contents of var "error"
@@ -47,18 +47,18 @@ var x = document.forms["newsletterform"]["email"].value;
 		
 </div>
 
-<div style="margin:auto; background-color: LightBlue; width: 350px; height:250px; border-bottom: 60px; border-style: double; border-width: 7px; margin-bottom: 60px;">
+<div style="margin:auto; background-color: LightBlue; width: 350px; height:250px; border-bottom: 60px; border-style: double; border-width: 7px; margin-bottom: 60px;"> <!-- a basic textbox division that has a bunch of styling applied to it, that makes it blue and bordered as well as sets it into the middle of the page. -->
 <p>come download our current newsletter brochure containing a handy reference to all deals we are currently hosting! </p>
-<a href="brochure.docx"> download our brochure of products</a>
+<a href="brochure.docx"> download our brochure of products</a> <!-- a link that attempts to open a document that isnt a website triggering a download prompt instead -->
 </div>
 
 <div style="margin:auto; background-color: LightBlue; width: 550px; height:250px; border-bottom: 60px; border-style: double; border-width: 7px; margin-bottom: 60px;">
 	<p> if you would like you can also sign up to our newsletter by entering your email below:</p>
-	<form name="newsletterform" action="/newsletter.php" onsubmit="return validateForm()" method= "post">
-	<table>
-		<tr>
+	<form name="newsletterform" action="/newsletter.php" onsubmit="return validateForm()" method= "post"> <!-- creates a form that is known as newsletter form and triggers the validateform script on being sent and posts to newsletter.php when succesfully sent. -->
+	<table> <!-- creates a table-->
+		<tr> <!-- creates new table row -->
 			<td> email address: </td>
-			<td> <input type="text" name="email" size="70"> </td>
+			<td> <input type="text" name="email" size="70"> </td> <!-- input form for the email adress has a size limit of 70 characters -->
 		</tr>
 		<tr>
 			<td> verify email: </td>

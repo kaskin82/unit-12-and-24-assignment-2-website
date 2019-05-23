@@ -27,9 +27,9 @@ a:link { /* THIS IS MEANT TO BE AN UNVISITED LINK */
 a:visited { /* this is for visited links */
 	color: orange;
 }
-linksheet.sticky{
-	position:sticky;
-	top:60;
+linksheet.sticky{ /* creates a class for linksheets that are given the sticky property */
+	position:sticky; /* this makes the element always attempt to stay on screen despite scrolling */
+	top:60; /*places it at the top of the page */
 	padding: 5px;
 	background:#12295F;
 	border-style: solid;
@@ -37,7 +37,7 @@ linksheet.sticky{
 	border:2px;
 }
 navilist {
-	display:table;
+	display:table; /* displays anything with this in a table format */
 }
 div.sticky { /* this is the style items for the div that have the class called sticky which makes them stick to the top of the page with a certain layout */
 	position:sticky;
@@ -51,7 +51,7 @@ div.sticky { /* this is the style items for the div that have the class called s
 	width: 300px;
 	margin-top: 70px;
 	display:inline-block;
-	z-index: 1;
+	z-index: 1; /* this places it 1st in the z layer meaning it goes on top of most other objects that do not have a set z layer  so it is displayed over them */
 
 }
 h2{ 
@@ -62,18 +62,18 @@ margin-left:50px; /* there must be 30px to the left of any p objects before any 
 text-align: center;
 
 }
-salesheader {
+salesheader { /* creates a new object type that cna be entered using <salesheader> */
 	background-color: chocolate;
 	height:150px;
 	width:98vw;
 	font-size:75px;
 	text-align: center;
-	font-weight: bold;
+	font-weight: bold; /* makes the font bold */
 	display: inline-block;
 	border-style: ridge;
 	border-width: 7px;
 	border-color: red;
-	margin: auto;
+	margin: auto; /* centers the relevant block */
 }
 producttitle {
 	font-size: 30px;

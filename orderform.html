@@ -9,20 +9,20 @@
 <script type="text/javascript"> 
 function validateForm() {  // creates a fucntion named validateForm
 	var x = document.forms["orderform"]["fname"].value; // sets a variable X as the contents of fname in the orderform form
-	var go = true; 
+	var go = true; // creates "go" and sets it to be true
 	var error = ""; // sets the variable error (just created) to be empty 
 	if (x == "") { // checks if the contents of fname is empty
-		error+="Name must be provided"; // adds this text to the error var if fname is empty
-		go = false;
+		error+="Name must be provided" // adds this text to the error var if fname is empty
+		go = false; // sets go as false
 	}
 	x = document.forms["orderform"]["email"].value; 
 	if ((x == "")||(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x)))){   // checks for any of theese symbols or functions in email form
-		error+="\nYou must enter a valid email adress" // adds this text to the error var if email is empty
+		error+="\nYou must enter a valid email adress" // adds this text to the error var if email is empty \n means it is added as a new line
 		go= false; // returns go as false 
 	}
 	x = document.forms["orderform"]["message"].value;
-	if (x == "") {
-		error+="\nPlease add a message with additional details";
+	if (x == " ") {
+		error+="\nPlease add a message with additional details"
 		go = false;
 	}
 	if(!(go)){ // if go returns as false trigger this script
@@ -31,7 +31,7 @@ function validateForm() {  // creates a fucntion named validateForm
 	}
 }
 
-function reset() {
+function reset() { // triggers upon the button labeled reset being hit
 	document.forms["orderform"]["fname"].value = ""; // clears the relevant form field.
 	document.forms["orderform"]["email"].value = "";
 	document.forms["orderform"]["message"].value = "";
@@ -86,7 +86,7 @@ function reset() {
 	</table> <!-- ends the table -->
 	</form> <!-- ends the form -->
 	</div>
-	<br />
+	<br/> <!-- line break-->
 </body>
 </html>
 				
