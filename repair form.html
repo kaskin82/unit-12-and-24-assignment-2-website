@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>order form</title>
+<link href="style sheet.css" rel="stylesheet" type="text/css">
+<style>
+</style>
+<script type="text/javascript"> 
+function validateForm() {  // creates a fucntion named validateForm
+	var x = document.forms["repairform"]["fname"].value; // sets a variable X as the contents of fname in the orderform form
+	var go = true; // creates "go" and sets it to be true
+	var error = ""; // sets the variable error (just created) to be empty 
+	if (x == "") { // checks if the contents of fname is empty
+		error+="Name must be provided" // adds this text to the error var if fname is empty
+		go = false; // sets go as false
+	}
+	x = document.forms["repairform"]["email"].value; 
+	if ((x == "")||(!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(x)))){   // checks for any of theese symbols or functions in email form
+		error+="\nYou must enter a valid email adress" // adds this text to the error var if email is empty \n means it is added as a new line
+		go= false; // returns go as false 
+	}
+	x = document.forms["repairform"]["message"].value;
+	if (x == " ") {
+		error+="\nPlease add a message with additional details"
+		go = false;
+	}
+	x = document.forms["repairform"]["item"].value;
+	if (x == "") {
+		error+="\nplease name the product you want repaired"
+		go = false;
+	}
+	if(!(go)){ // if go returns as false trigger this script
+		alert(error); // prints a popup alert with the contents of var "error"
+		return go; // sends go
+	}
+}
+
+function reset() { // triggers upon the button labeled reset being hit
+	document.forms["repairform"]["fname"].value = ""; // clears the relevant form field.
+	document.forms["repairform"]["email"].value = "";
+	document.forms["repairform"]["message"].value = "";
+	document.forms["repairform"]["item"].value = "";
+}
+
+</script>	
+</head>
+<body>
+<h1> welcome to rig fixers!</h1>
+<h2>we are dedicated to getting your rig up and running, quick and clean</h2>
+
+<div class="sticky" style="width: 90px">
+	<navilist> <a href="Homepage.html">home</a> </navilist>
+	<navilist> <a href="contactpage.html">contact us</a> </navilist>
+	<navilist> <a href="orderform.html">order form</a> </navilist>
+	<navilist> <a href="newsletterandbrochure.html"> newsletter </a> </navilist>
+	<navilist> <a href="graphicscarddeal.html"> graphics card deal </a> </navilist>
+	<navilist> <a href="keyboarddeal.html"> keyboard deal </a> </navilist>
+	<navilist> <a href="mousedeal.html"> mouse deal </a> </navilist>
+	<navilist> <a href="aboutpage.html"> about us </a> </navilist>
+</div>
+
+<div align=center>
+	<p> apply for repairs here! <p>
+	<form name="repairform" action="/orderform.php" onsubmit="return validateForm()" method= "post"> <!-- creates a form with name orderform that prints through the php file orderform and uses fucntion validateForm -->
+	<table> <!-- creates a table -->
+		<tr> <!-- creates a table row -->
+			<td> Full name: </td> <!-- creates a small section on this row for text -->
+			<td> <input type="text" name="fname" size="50"> </td> <!-- creates and input zone for names titled fname -->
+		</tr> <!-- closes the table row-->
+		<tr>
+			<td>Email: </td>
+			<td> <input type="text" name="email" size="50"> </td>
+		</tr>
+		<tr>
+			<td> what product do you need repair? </td>
+			<td> <input type="text" name= "item" size="50"> 
+			</td>
+		</tr>
+		<tr>
+			<td> describe your problem </td>
+			<td> <textarea name="message" rows="8" cols="60"> </textarea> </td> <!-- a text area is a large area in which a user can write any text as long as it fits in the allocated space. -->
+		</tr>
+		<tr>
+			<td><input type="submit" value="Send"> </td> <!-- creates a button that sends the data and tirggers the validaiton script -->
+			<td><input type="reset" value="Reset"> </td> <!-- creates a button labeled reset that resets all the fields -->
+		</tr>
+	</table> <!-- ends the table -->
+	</form> <!-- ends the form -->
+	</div>
+	<br/> <!-- line break-->
+</body>
+</html>
